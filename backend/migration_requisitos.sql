@@ -1,5 +1,5 @@
 -- ============================================================
--- FinanN — Migração para conformidade com Documento de Requisitos
+-- FinanN — Migração para conformidade com Documento de Requisitoscd c
 -- ============================================================
 
 -- 1. Corrigir NULLs existentes em transactions antes de adicionar NOT NULL
