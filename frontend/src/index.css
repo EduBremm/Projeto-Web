@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* =============================================
+   FinanN — Design System
+   ============================================= */
+
+* { font-family: 'Inter', system-ui, sans-serif; }
+
+:root {
+  --brand-900: #0f172a;
+  --brand-800: #1e293b;
+  --brand-700: #1d4ed8;
+  --brand-600: #2563eb;
+  --brand-400: #60a5fa;
+  --green:     #10b981;
+  --red:       #ef4444;
+  --yellow:    #f59e0b;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Contador animado */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.count-up { animation: countUp 0.5s ease forwards; }
+
+/* Ticker de cotações */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track { animation: ticker 30s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+
+/* Pulse verde para dados ao vivo */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.live-dot { animation: livePulse 2s ease-in-out infinite; }
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0,0,0,0.12);
+}
+
+/* Gradient cards */
+.card-blue   { background: linear-gradient(135deg, #1d4ed8, #3b82f6); }
+.card-green  { background: linear-gradient(135deg, #059669, #10b981); }
+.card-red    { background: linear-gradient(135deg, #dc2626, #ef4444); }
+.card-purple { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
+.card-amber  { background: linear-gradient(135deg, #d97706, #f59e0b); }
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Sidebar gradient */
+.sidebar-bg {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Progress bar animada */
+.progress-bar {
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Borda brilhante em cards selecionados */
+.ring-glow {
+  box-shadow: 0 0 0 2px #3b82f6, 0 0 20px rgba(59,130,246,0.3);
+}
+
+/* Tag badge */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600;
+}
+
+/* Separador com gradiente */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
